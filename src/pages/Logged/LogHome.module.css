@@ -1,0 +1,15 @@
+.townGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0px;
+  margin: 250px auto;
+  width: 60%;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.descDiv {
+  text-align: center;
+  margin-top: 50px;
+}

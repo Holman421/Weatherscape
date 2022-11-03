@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Logged/LogHome";
+import AddTown from "./pages/Logged/AddTown";
+import { useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebaseConfig";
+import UnLogHome from "./pages/Unlogged/UnLogHome";
 
-function App() {
+const App = () => {
+  const [user, setUser] = useState({});
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {user ? (
+        <>
+          <Routes>
+            <Route path="/" element={<Home UserID={user.uid} />} />
+            <Route path="/addtown" element={<AddTown />} />
+          </Routes>
+        </>
+      ) : (
+        <>
+          <Routes>
+            <Route path="/" element={<UnLogHome />} />
+          </Routes>
+        </>
+      )}
     </div>
   );
-}
+};
 
 export default App;

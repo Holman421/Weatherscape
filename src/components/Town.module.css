@@ -1,0 +1,114 @@
+.town {
+  width: 400px;
+  height: 220px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 4rem;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+  animation: loadAnimate 300ms ease-in-out;
+  transform: scale(0.8)
+}
+
+
+@keyframes loadAnimate {
+  0% {
+    transform: translateY(20px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px) scale(0.8);
+    opacity: 1;
+  }
+}
+
+.town::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.15);
+  inset: 0;
+  transform: rotate(-5deg);
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.loginImg {
+  position: absolute;
+  width: 100px;
+  right: 30px;
+  top: 5px;
+}
+.deleteButton {
+  position: absolute;
+  left: 25px;
+  bottom: 20px;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 300ms;
+}
+.deleteButton:hover {
+  color: red;
+}
+
+.updateButton {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 0.5rem 1rem;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  transition: color 300ms;
+
+}
+.updateButton:hover {
+    color: blue;
+  }
+
+.townName {
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  font-size: 2.5em;
+}
+.townWeather {
+  position: absolute;
+  left: 25px;
+  top: 75px;
+  font-size: 2em;
+}
+.townTime {
+  position: absolute;
+  left: 25px;
+  top: 120px;
+  font-size: 1.5em;
+}
+.townTemp {
+  position: absolute;
+  right: 25px;
+  top: 115px;
+  font-size: 2em;
+}
+.townUpdate {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 100px);
+  font-size: 0.96em;
+}

@@ -1,0 +1,359 @@
+.middleCloudsContainer {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -50%) scale(2) translateX(-183px);
+}
+
+.middleCloudsContainerSmall {
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.background {
+  transition: all 1s ease-in-out;
+}
+
+.background div {
+  position: absolute;
+  transition: all 1s ease-in-out;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+  border-radius: 107px;
+}
+
+.background div:not(.leftTopSun, .rightBottomSun) {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.04) 100%);
+}
+
+.mainDesc {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  width: 485px;
+  height: 175px;
+  border-radius: 50px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mainDesc2 {
+  position: absolute;
+  display: none !important;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  width: 485px;
+  height: 175px;
+  border-radius: 50px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.h3Margin {
+  margin-top: 10px;
+}
+
+.mainDesc h3 span {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.buttonDiv {
+  margin-left: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttonDiv button {
+  background: black;
+  color: white;
+  padding: 1rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: background 0.3s;
+}
+
+.buttonDiv button:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.leftTopSun {
+  width: 179px;
+  height: 179px;
+  right: -26px;
+  top: -55px;
+  background: linear-gradient(180deg, rgba(235, 255, 0, 0.81) 0%, rgba(255, 185, 5, 0.48) 100%);
+  backdrop-filter: blur(5px);
+}
+
+.leftTopCloud {
+  width: 180px;
+  height: 79px;
+  right: -90px;
+  top: 85px;
+  backdrop-filter: blur(5px);
+}
+
+.leftBottomCloud1 {
+  width: 137px;
+  height: 62px;
+  left: 110px;
+  bottom: 470px;
+  backdrop-filter: blur(25px);
+}
+
+.leftBottomCloud2 {
+  width: 216px;
+  height: 79px;
+  left: 23px;
+  bottom: 422px;
+  backdrop-filter: blur(25px);
+  cursor: pointer;
+}
+
+.rightBottomSun {
+  width: 109px;
+  height: 109px;
+  right: -20px;
+  bottom: 218px;
+  background: linear-gradient(180deg, rgba(255, 245, 0, 0.6) 0%, rgba(255, 185, 5, 0.2) 100%);
+  backdrop-filter: blur(5px);
+}
+
+.rightBottomCloud1 {
+  width: 157px;
+  height: 69px;
+  right: 59px;
+  bottom: 218px;
+  backdrop-filter: blur(5px);
+}
+
+.rightBottomCloud2 {
+  width: 334px;
+  height: 77px;
+  right: -90px;
+  bottom: 175px;
+  backdrop-filter: blur(5px);
+}
+
+.middleCloud1 {
+  width: 133px;
+  height: 80px;
+  left: 77px;
+  top: 29px;
+  backdrop-filter: blur(25px);
+}
+
+.middleCloud2 {
+  width: 177px;
+  height: 75px;
+  left: 132px;
+  top: 42px;
+  backdrop-filter: blur(25px);
+}
+
+.middleCloud3 {
+  width: 164px;
+  height: 57px;
+  left: 23px;
+  top: 52px;
+  backdrop-filter: blur(25px);
+}
+
+.middleCloud4 {
+  width: 130px;
+  height: 55px;
+  left: 212px;
+  top: 58px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.middleCloud4Small {
+  width: 340px;
+  height: 55px;
+  left: 250px;
+  top: 58px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.linkSmall {
+  transition: all 1s cubic-bezier(0.69, 0.01, 0.35, 1);
+  opacity: 1;
+  position: relative;
+  padding: 0 10px 0 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.linkSmall::before,
+.linkSmall::after {
+  content: "";
+  position: absolute;
+  top: -0.25em;
+  bottom: -0.15em;
+  left: 0.25em;
+  right: 0.25em;
+  opacity: 1;
+  transition: transform ease-out 250ms;
+}
+
+.linkSmall::before {
+  border-bottom: 1px solid black;
+  transform: scale(0, 1);
+  transform-origin: left;
+}
+
+.linkSmall:hover::before {
+  transform: scale(1, 1);
+  transform-origin: left;
+}
+
+.marginB {
+  margin-left: -150px;
+}
+
+.marginA {
+  margin-left: 60px;
+}
+
+.middleCloud5Small {
+  width: 274px;
+  height: 68px;
+  left: 43px;
+  top: 66px;
+  backdrop-filter: blur(25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1 em;
+  cursor: pointer;
+}
+.middleCloud5 {
+  width: 274px;
+  height: 68px;
+  left: 43px;
+  top: 66px;
+  backdrop-filter: blur(25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1 em;
+}
+
+.middleDrop1 {
+  width: 33px;
+  height: 5px;
+  left: 80px;
+  top: 140px;
+  border-radius: 36px;
+  transform: rotate(-54.77deg);
+  animation: mraky2 470ms ease-in-out infinite;
+}
+
+.middleDrop2 {
+  width: 42px;
+  height: 5px;
+  left: 105px;
+  top: 145px;
+  border-radius: 36px;
+  transform: rotate(-54.77deg);
+  animation: mraky2 460ms ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+.middleDrop3 {
+  width: 33px;
+  height: 5px;
+  left: 135px;
+  top: 140px;
+  transform: rotate(-54.77deg);
+  animation: mraky2 450ms ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+.middleDrop4 {
+  width: 42px;
+  height: 5px;
+  left: 155px;
+  top: 145px;
+  transform: rotate(-54.77deg);
+  animation: mraky2 440ms ease-in-out infinite;
+}
+
+.middleDrop5 {
+  width: 33px;
+  height: 5px;
+  left: 185px;
+  top: 140px;
+  transform: rotate(-54.77deg);
+  animation: mraky2 430ms ease-in-out infinite;
+}
+
+.middleDrop6 {
+  width: 42px;
+  height: 5px;
+  left: 205px;
+  top: 145px;
+  transform: rotate(-54.77deg);
+  animation: mraky2 420ms ease-in-out infinite;
+}
+
+.middleDrop7 {
+  width: 33px;
+  height: 5px;
+  left: 235px;
+  top: 140px;
+  transform: rotate(-54.77deg);
+  animation: mraky2 410ms ease-in-out infinite;
+}
+
+@keyframes mraky {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(50px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes mraky2 {
+  0% {
+    transform: translateY(-10px) rotate(-54.77deg);
+  }
+
+  50% {
+    transform: translateY(0px) rotate(-54.77deg);
+  }
+
+  100% {
+    transform: translateY(-10px) rotate(-54.77deg);
+  }
+}
