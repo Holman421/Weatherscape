@@ -28,4 +28,21 @@ Each user has its own list of towns.
 
 Use Typescript instead of plain JS.  <br />
 Use Tailwing instead of CSS Modules.  <br />
-Use some external CSS animation library (Framer Motion/react-transition-group) instead of doing the Unlogged page animation with plain CSS Modules and react States.  
+Use some external CSS animation library (Framer Motion/react-transition-group) instead of doing the Unlogged page animation with plain CSS Modules and react States. 
+
+## Strengths & Flaws
+
+Connected to this project I want to mention some strengths that I am proud of and flaws that I am aware of. I am working on improving both of them.
+
+### `Strengths`
+
+Animations.
+Look and functionality of forms.
+Overall UI.
+
+### `Flaws`
+
+Working with async code.
+Messy css files.
+Structure of files.
+Unnecessary JS logic in html.
