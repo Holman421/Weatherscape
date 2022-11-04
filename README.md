@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Welcome to my Weatherscape application repository 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://weather-app-d315c.web.app
 
-## Available Scripts
+Weatherscape is a web application for weather forecast.
+For now the app is not responsive and mobile friendly. 
 
-In the project directory, you can run:
+## Tech stack
 
-### `npm start`
+React, Javascript, CSS Modules, Firebase provider for backend and database
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Desciption/Manual
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Weatherscape is a made up name for this project. 
 
-### `npm test`
+### `Unlogged user`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+At first you are greeted with option to login or register. After some nice animation you can use the forms (click headline in left top to redo the animation). When creating the forms I focused on making them user friendly such as giving the user feedback about bad inputs even before submiting and not allowing to submit them with bad inputs.
 
-### `npm run build`
+### `Logged user`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Now you greeted with empty table of your town cards for forecasts and 2 options. You can either simply logout or add new town. After adding the town you can see current weather, temperature and time in the town. Sometimes the window needs extra manual reload to see the towns, its an unwanted bug with async code which I am still working on.
+Weather API that I am using have capped 500 daily calls soo each town card has its own manual update button to reduce API calls. Each town also have a delete button.
+Each user has its own list of towns.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future plans
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Use Typescript instead of plain JS.
+Use Tailwing instead of CSS Modules.
+Use some external CSS animation library (Framer Motion/react-transition-group) instead of doing the Unlogged page animation with plain CSS Modules and react States
