@@ -13,35 +13,29 @@ const LogHome = (props) => {
     setTriggerUseEffect(!triggerUseEffect);
   };
 
+  const filterData = (data) => {
+    const loadedTowns = [];
+    for (const key in data) {
+      if (key.includes(props.UserID)) {
+        loadedTowns.push({
+          id: key,
+          name: data[key].name,
+          temperature: data[key].temperature,
+          timezone: data[key].timezone,
+          weather: data[key].weather,
+          lastUpdated: data[key].lastUpdated,
+        });
+      }
+    }
+    setTowns(loadedTowns);
+  };
+
   useEffect(() => {
-    const fetchTowns = async () => {
-      setIsLoading(true);
-      const response = await fetch(
-        "https://weather-app-d315c-default-rtdb.europe-west1.firebasedatabase.app/towns.json"
-      );
-      if (!response.ok) {
-        console.log("Something went wrong");
-      }
-      const responseData = await response.json();
-      const loadedTowns = [];
-      for (const key in responseData) {
-        if (key.includes(props.UserID)) {
-          loadedTowns.push({
-            id: key,
-            name: responseData[key].name,
-            temperature: responseData[key].temperature,
-            timezone: responseData[key].timezone,
-            weather: responseData[key].weather,
-            lastUpdated: responseData[key].lastUpdated,
-          });
-        }
-        setTowns(loadedTowns);
-        setIsLoading(false);
-      }
-    };
-    fetchTowns().catch((error) => {
-      setIsLoading(false);
-    });
+    setIsLoading(true);
+    fetch("https://weather-app-d315c-default-rtdb.europe-west1.firebasedatabase.app/towns.json")
+      .then((response) => response.json())
+      .then((data) => filterData(data))
+      .then(setIsLoading(false));
   }, [triggerUseEffect, props.UserID]);
 
   let descDiv;

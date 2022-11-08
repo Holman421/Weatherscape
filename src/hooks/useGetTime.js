@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 function useGetTime(inputTime) {
   const [time, setTime] = useState();
   inputTime /= 3600;
-  inputTime -= 2;
+  inputTime -= 1;
 
   const addZeroes = (num) => {
     return num < 10 ? "0" + num : num;

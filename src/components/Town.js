@@ -59,7 +59,7 @@ const Town = (props) => {
       const addZeroes = (num) => {
         return num < 10 ? "0" + num : num;
       };
-      const today = new Date(new Date().setHours(new Date().getHours() + 7200));
+      const today = new Date(new Date().setHours(new Date().getHours() + 3600));
       const hr = addZeroes(today.getHours());
       const min = addZeroes(today.getMinutes());
       lastUpdatedTime = hr + ":" + min;

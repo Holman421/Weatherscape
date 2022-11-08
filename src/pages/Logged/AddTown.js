@@ -9,7 +9,7 @@ import { auth } from "../../firebaseConfig";
 import TownIcon from "../../components/Media/FormTownIcon.svg";
 
 function AddTown() {
-  const { time } = useGetTime(7200);
+  const { time } = useGetTime(3600);
   const navigate = useNavigate();
   const [error, setError] = useState(null);
 
